@@ -24,7 +24,7 @@ git clone https://github.com/tu-usuario/pokedex-vanilla.git
 ## 🧩 Demo
 
 👉 **Prueba la app aquí:**  
-🔗 [https://tu-usuario.github.io/pokedex-vanilla/](https://tu-usuario.github.io/pokedex-vanilla/)
+🔗 [https://oriolcortes.github.io/pokedex-vanilla/](https://oriolcortes.github.io/pokedex-vanilla/)
 
 ---
 
