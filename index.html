@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex — Vanilla + Tailwind + Vite</title>
+    <script defer type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <header class="sticky top-0 z-10 border-b bg-white/80 backdrop-blur">
+      <div
+        class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between"
+      >
+        <h1 class="text-2xl font-black tracking-tight">
+          <span class="text-red-500">Poké</span
+          ><span class="text-yellow-500">dex</span>
+        </h1>
+        <a
+          class="text-xs text-slate-500 hover:text-slate-700"
+          href="https://pokeapi.co/"
+          target="_blank"
+          rel="noreferrer"
+          >Fuente: PokeAPI</a
+        >
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 py-6 space-y-6">
+      <!-- Controles -->
+      <section
+        class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Buscar por nombre..."
+            class="w-72 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <button
+            id="search-clear"
+            class="rounded-xl border px-3 py-2 text-sm hover:bg-slate-100"
+          >
+            Limpiar
+          </button>
+        </div>
+        <span id="count-badge" class="text-sm text-slate-600"></span>
+      </section>
+
+      <!-- Grid -->
+      <section
+        id="grid"
+        class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
+      ></section>
+
+      <!-- Loader + vacío -->
+      <div id="loader" class="hidden flex justify-center py-10">
+        <div
+          class="h-8 w-8 animate-spin rounded-full border-4 border-slate-300 border-t-indigo-500"
+        ></div>
+      </div>
+      <div id="empty" class="hidden text-center text-slate-500">
+        No se han encontrado Pokémon.
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="invisible fixed inset-0 z-20 flex items-center justify-center bg-black/40 opacity-0 transition-opacity"
+    >
+      <div
+        class="max-h-[85vh] w-[min(34rem,92vw)] overflow-y-auto rounded-2xl bg-white p-5 shadow-xl"
+      >
+        <div class="flex items-center justify-between">
+          <h2 id="modal-title" class="text-xl font-bold"></h2>
+          <button
+            id="modal-close"
+            class="rounded-lg px-2 py-1 text-sm hover:bg-slate-100"
+          >
+            ✖
+          </button>
+        </div>
+        <div id="modal-body" class="mt-4 space-y-4"></div>
+      </div>
+    </div>
+  </body>
+</html>
