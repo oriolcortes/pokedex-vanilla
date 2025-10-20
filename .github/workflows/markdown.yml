@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Paso 1: clona el repositorio en el runner
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Paso 2: ejecuta el linter de Markdown (CLI oficial mantenido)
       - uses: DavidAnson/markdownlint-cli2-action@v17
