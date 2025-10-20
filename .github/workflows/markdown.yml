@@ -4,6 +4,8 @@
 name: Markdown Lint
 
 on:
+  # Permite ejecutar el workflow manualmente
+  workflow_dispatch:
   # Dispara la acción en cada push que modifique archivos .md o la config del linter
   push:
     paths:
