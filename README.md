@@ -18,7 +18,7 @@ HTML, CSS, JavaScript (fetch API, LocalStorage)
 Clona el repo y abre `index.html` en tu navegador.
 
 ```bash
-git clone https://github.com/tu-usuario/pokedex-vanilla.git
+git clone https://github.com/oriolcortes/pokedex-vanilla.git
 ```
 
 ## 🧩 Demo
